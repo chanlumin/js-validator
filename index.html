@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>js-validator</title>
+</head>
+<body>
+    <!-- required:true, 是否进行校验
+    reg: '/[0-9]+/',  自定义校验规则
+    style: 'color:red !important', // 设置校验message的属性
+    message: '请输入0-9的数字'  // 自定义校验信息 
+
+  
+  --> 
+  <template class="error-msg">{{}}</template>
+   <form>
+      <input data-validate="required|email|len(1,10)" type="text">
+      <input data-validate="{
+        required:true,
+        reg: /^[0-9]+$/,
+        style: 'color:red !important',
+        message: '请输入0-9的数字' ,      
+      }" type="text">
+      <input type="text">
+      <input type="password">
+   </form>
+
+  <script src="./src/index.js"></script>
+
+</body>
+</html>
